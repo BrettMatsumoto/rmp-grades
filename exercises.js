@@ -54,12 +54,22 @@ var rmp = (function(){
         var randInd = Math.floor(Math.random()*scores.length)
         return scores[randInd]
     }
+    var above70 = function(){
+        var retArr = [];
+        for (var i = 0; i < scores.length; i++){
+            if (scores[i] >= 70){
+                retArr.push(scores[i])
+            }
+        }
+        return retArr
+    }
     return{
         sum: sum,
         avg: avg,
         max: max,
         min: min,
-        rand: rand
+        rand: rand,
+        above70: above70
     }
 }())
 
@@ -67,4 +77,5 @@ var rmp = (function(){
 // console.log(rmp.avg())
 // console.log(rmp.max())
 // console.log(rmp.min())
-console.log(rmp.rand())
+// console.log(rmp.rand())
+console.log(rmp.above70())
