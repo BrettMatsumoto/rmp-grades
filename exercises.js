@@ -63,13 +63,17 @@ var rmp = (function(){
         }
         return retArr
     }
+    var first = function(){
+        return scores[0]
+    }
     return{
         sum: sum,
         avg: avg,
         max: max,
         min: min,
         rand: rand,
-        above70: above70
+        above70: above70,
+        first: first
     }
 }())
 
@@ -78,4 +82,5 @@ var rmp = (function(){
 // console.log(rmp.max())
 // console.log(rmp.min())
 // console.log(rmp.rand())
-console.log(rmp.above70())
+// console.log(rmp.above70())
+console.log(rmp.first())
