@@ -69,6 +69,14 @@ var rmp = (function(){
     var last = function(){
         return scores[scores.length-1]
     }
+    var addFivePercent = function(){
+        var retArr = [];
+        for (var i = 0; i < scores.length; i++){
+            var percent = scores[i]*.05;
+            var newScore = percent + scores[i];
+            retArr.push(newScore)
+        }
+    }
     return{
         sum: sum,
         avg: avg,
@@ -77,7 +85,8 @@ var rmp = (function(){
         rand: rand,
         above70: above70,
         first: first,
-        last: last
+        last: last,
+        addFivePercent: addFivePercent
     }
 }())
 
@@ -88,4 +97,5 @@ var rmp = (function(){
 // console.log(rmp.rand())
 // console.log(rmp.above70())
 // console.log(rmp.first())
-console.log(rmp.last())
+// console.log(rmp.last())
+console.log(rmp.addFivePercent())
