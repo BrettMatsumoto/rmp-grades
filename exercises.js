@@ -24,9 +24,19 @@ var rmp = (function(){
         }
         return total;
     }
+    var avg = function(){
+        var total = 0;
+        for (var i = 0; i<scores.length;i++){
+            total += scores[i]
+            var avg = total/scores.length
+        }
+        return avg
+    }
     return{
-        sum: sum
+        sum: sum,
+        avg: avg
     }
 }())
 
 console.log(rmp.sum())
+console.log(rmp.avg())
