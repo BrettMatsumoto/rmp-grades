@@ -50,15 +50,21 @@ var rmp = (function(){
         }
         return minVal
     }
+    var rand = function(){
+        var randInd = Math.floor(Math.random()*scores.length)
+        return scores[randInd]
+    }
     return{
         sum: sum,
         avg: avg,
         max: max,
-        min: min
+        min: min,
+        rand: rand
     }
 }())
 
 // console.log(rmp.sum())
 // console.log(rmp.avg())
 // console.log(rmp.max())
-console.log(rmp.min())
+// console.log(rmp.min())
+console.log(rmp.rand())
