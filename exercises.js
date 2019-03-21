@@ -66,6 +66,9 @@ var rmp = (function(){
     var first = function(){
         return scores[0]
     }
+    var last = function(){
+        return scores[scores.length-1]
+    }
     return{
         sum: sum,
         avg: avg,
@@ -73,7 +76,8 @@ var rmp = (function(){
         min: min,
         rand: rand,
         above70: above70,
-        first: first
+        first: first,
+        last: last
     }
 }())
 
@@ -83,4 +87,5 @@ var rmp = (function(){
 // console.log(rmp.min())
 // console.log(rmp.rand())
 // console.log(rmp.above70())
-console.log(rmp.first())
+// console.log(rmp.first())
+console.log(rmp.last())
