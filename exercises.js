@@ -41,13 +41,24 @@ var rmp = (function(){
         }
         return maxVal
     }
+    var min = function(){
+        minVal = scores[0];
+        for (var i = 0; i<scores.length;i++){
+            if (scores[i] < minVal){
+                minVal = scores[i]
+            }
+        }
+        return minVal
+    }
     return{
         sum: sum,
         avg: avg,
-        max: max
+        max: max,
+        min: min
     }
 }())
 
-console.log(rmp.sum())
-console.log(rmp.avg())
-console.log(rmp.max())
+// console.log(rmp.sum())
+// console.log(rmp.avg())
+// console.log(rmp.max())
+console.log(rmp.min())
