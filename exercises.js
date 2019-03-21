@@ -32,11 +32,22 @@ var rmp = (function(){
         }
         return avg
     }
+    var max = function(){
+        maxVal = 0;
+        for (var i = 0; i<scores.length;i++){
+            if (scores[i] > maxVal){
+                maxVal = scores[i]
+            }
+        }
+        return maxVal
+    }
     return{
         sum: sum,
-        avg: avg
+        avg: avg,
+        max: max
     }
 }())
 
 console.log(rmp.sum())
 console.log(rmp.avg())
+console.log(rmp.max())
