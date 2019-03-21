@@ -15,4 +15,18 @@
 // 9. generates a new score list with a 5% increase for each score 
 // 10.generates a list of scores that are odd numbered
 
+var rmp = (function(){
+    var scores = [65,76,100,88,17,55]
+    var sum = function(){
+        var total = 0;
+        for (var i = 0; i<scores.length; i++){
+            total += scores[i]
+        }
+        return total;
+    }
+    return{
+        sum: sum
+    }
+}())
 
+console.log(rmp.sum())
