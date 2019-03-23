@@ -77,6 +77,15 @@ var rmp = (function(){
         }
         return retArr
     }
+    var oddNumbered = function(){
+        var retArr = [];
+        for (var i = 0; i < scores.length; i++){
+            if (scores[i]%2 !== 0){
+                retArr.push(scores[i])
+            }
+        }
+        return retArr;
+    }
     return{
         sum: sum,
         avg: avg,
@@ -86,7 +95,8 @@ var rmp = (function(){
         above70: above70,
         first: first,
         last: last,
-        addFivePercent: addFivePercent
+        addFivePercent: addFivePercent,
+        oddNumbered: oddNumbered
     }
 }())
 
@@ -98,4 +108,5 @@ var rmp = (function(){
 // console.log(rmp.above70())
 // console.log(rmp.first())
 // console.log(rmp.last())
-console.log(rmp.addFivePercent())
+// console.log(rmp.addFivePercent())
+console.log(rmp.oddNumbered())
