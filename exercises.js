@@ -72,10 +72,10 @@ var rmp = (function(){
     var addFivePercent = function(){
         var retArr = [];
         for (var i = 0; i < scores.length; i++){
-            var percent = scores[i]*.05;
-            var newScore = percent + scores[i];
-            retArr.push(newScore)
+            var newI = scores[i]*.05 + scores[i];
+            retArr.push(newI)
         }
+        return retArr
     }
     return{
         sum: sum,
